@@ -11,7 +11,7 @@ def main():
     data_dict = process_data('./datasets/hymenoptera_data/', batch_size=4)
     # declare model
     teacher_model = ResNet(num_classes=2).to(device)
-    teacher_model.load_state_dict(torch.load('./train/teacher_model.pth'))
+    # teacher_model.load_state_dict(torch.load('./train/teacher_model.pth'))
     student_model = SimpleNeuralNet().to(device)
     student_distilled_model = SimpleNeuralNet().to(device)
 
